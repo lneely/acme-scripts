@@ -1,2 +1,2 @@
 #!/usr/bin/env rc
-git fetch --all origin
+git fetch --all

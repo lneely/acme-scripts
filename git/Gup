@@ -1,2 +1,6 @@
 #!/usr/bin/env rc
-git push
+git push >[2]/dev/null
+if(~ $status 128) {
+	branch=`{git rev-parse --abbrev-ref HEAD}
+	git push --set-upstream origin $branch
+}
