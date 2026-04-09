@@ -1,0 +1,4 @@
+#!/usr/bin/env rc
+if(~ $#* 0) n=10
+if not n=$1
+git log -n $n
