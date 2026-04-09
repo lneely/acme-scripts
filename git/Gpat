@@ -1,0 +1,3 @@
+#!/usr/bin/env rc
+git diff > /tmp/patch.diff
+echo /tmp/patch.diff
