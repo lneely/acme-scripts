@@ -1,0 +1,6 @@
+#!/usr/bin/env rc
+if(~ $#samfile 0) {
+	echo 'G- must be run inside acme' >[2=1]
+	exit 'no samfile'
+}
+git reset HEAD -- $samfile
