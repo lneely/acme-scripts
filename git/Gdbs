@@ -1,0 +1,6 @@
+#!/usr/bin/env rc
+base=`{git merge-base HEAD origin/`{git symbolic-ref refs/remotes/origin/HEAD | sed 's|refs/remotes/origin/||'}}
+if(~ $#samfile 0)
+	git diff --stat $base
+if not
+	git diff --stat $base -- $samfile
