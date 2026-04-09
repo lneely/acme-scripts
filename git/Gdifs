@@ -1,0 +1,5 @@
+#!/usr/bin/env rc
+if(~ $#samfile 0)
+	git diff --staged
+if not
+	git diff --staged $samfile

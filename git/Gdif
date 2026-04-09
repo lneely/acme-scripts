@@ -1,2 +1,5 @@
 #!/usr/bin/env rc
-git diff
+if(~ $#samfile 0)
+	git diff
+if not
+	git diff $samfile
